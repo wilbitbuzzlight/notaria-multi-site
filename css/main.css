@@ -174,6 +174,74 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
+/* ── SVG Icon Utilities ──────────────────────────────────── */
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.nav-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  opacity: .85;
+}
+
+.nav-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  opacity: .7;
+}
+
+.footer-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+
+.card-icon-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.why-icon-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-badge-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-badge-icon svg {
+  width: 14px;
+  height: 14px;
+  opacity: .85;
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg {
+  width: 36px;
+  height: 36px;
+  color: var(--gold);
+}
+
 /* ── Scroll Fade-in ───────────────────────────────────────── */
 .fade-in {
   opacity: 0;
@@ -467,34 +535,26 @@ ul { list-style: none; }
 /* ── HERO ─────────────────────────────────────────────────── */
 .hero {
   background: var(--navy);
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
   color: var(--white);
   padding: 96px 0 80px;
   position: relative;
   overflow: hidden;
 }
 
-/* Geometric pattern */
+/* Dark overlay on top of hero image */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    repeating-linear-gradient(
-      60deg,
-      rgba(201,168,76,.06) 0px,
-      rgba(201,168,76,.06) 1px,
-      transparent 1px,
-      transparent 60px
-    ),
-    repeating-linear-gradient(
-      -60deg,
-      rgba(201,168,76,.06) 0px,
-      rgba(201,168,76,.06) 1px,
-      transparent 1px,
-      transparent 60px
-    );
+  background: linear-gradient(to right, rgba(8,14,30,.90) 40%, rgba(8,14,30,.70) 100%);
   pointer-events: none;
 }
+
+/* Subtle gold accent circle */
 
 .hero::after {
   content: '';
@@ -961,6 +1021,27 @@ ul { list-style: none; }
   border-top: 1px solid var(--border);
 }
 
+/* Service page dark CTA section (sits above footer) */
+.contact-cta-dark {
+  background: var(--navy);
+  padding: var(--section-gap) 0 calc(var(--section-gap) + 32px);
+  text-align: center;
+}
+
+.contact-cta-dark .section-label {
+  color: var(--gold-light);
+}
+
+.contact-cta-dark .section-title {
+  color: var(--white);
+}
+
+.contact-cta-dark p {
+  color: rgba(255,255,255,.72);
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
 .contact-cta-inner {
   text-align: center;
   max-width: 600px;
@@ -989,7 +1070,7 @@ ul { list-style: none; }
 
 /* ── FOOTER ───────────────────────────────────────────────── */
 .footer {
-  background: var(--navy-dark);
+  background: #06090f;
   color: rgba(255,255,255,.7);
   padding: 64px 0 32px;
 }
@@ -1006,6 +1087,7 @@ ul { list-style: none; }
   height: 40px;
   width: auto;
   margin-bottom: 14px;
+  filter: brightness(0) invert(1) opacity(.88);
 }
 
 .footer-tagline {
@@ -1124,6 +1206,9 @@ ul { list-style: none; }
 /* ── SERVICE PAGE HERO ────────────────────────────────────── */
 .page-hero {
   background: var(--navy);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 64px 0 56px;
   position: relative;
   overflow: hidden;
@@ -1141,6 +1226,12 @@ ul { list-style: none; }
       transparent 1px,
       transparent 48px
     );
+}
+
+/* When hero has a real image, use a dark overlay instead of the line pattern */
+.page-hero.has-image::before {
+  background-image: none;
+  background: linear-gradient(to right, rgba(8,14,30,.88) 40%, rgba(8,14,30,.72) 100%);
 }
 
 .breadcrumb {
