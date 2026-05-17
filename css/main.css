@@ -713,10 +713,10 @@ ul { list-style: none; }
 }
 
 .service-card-icon {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1;
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -883,9 +883,22 @@ ul { list-style: none; }
 }
 
 .why-icon {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
-  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(201,168,76,.18);
+  border-radius: 12px;
+  color: var(--gold-light);
+}
+
+.why-icon-svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--gold-light);
 }
 
 .why-card h3 {
@@ -904,10 +917,10 @@ ul { list-style: none; }
 
 /* ── TRUST BADGES ─────────────────────────────────────────── */
 .trust-section {
-  padding: 56px 0;
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  padding: 72px 0;
+  background: var(--navy);
+  border-top: none;
+  border-bottom: none;
 }
 
 .trust-inner {
@@ -919,7 +932,7 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--gold-light);
   margin-bottom: 28px;
 }
 
@@ -932,16 +945,16 @@ ul { list-style: none; }
 }
 
 .trust-badge img {
-  height: 80px;
+  height: 120px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(20%);
-  transition: filter var(--transition), transform var(--transition);
+  filter: brightness(0) invert(1) opacity(.9);
+  transition: opacity var(--transition), transform var(--transition);
 }
 
 .trust-badge img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
+  opacity: 1;
+  transform: scale(1.06);
 }
 
 /* ── REVIEWS ──────────────────────────────────────────────── */
@@ -1023,9 +1036,10 @@ ul { list-style: none; }
 
 /* Service page dark CTA section (sits above footer) */
 .contact-cta-dark {
-  background: var(--navy);
+  background: var(--navy-dark);
   padding: var(--section-gap) 0 calc(var(--section-gap) + 32px);
   text-align: center;
+  border-top: 1px solid rgba(201,168,76,.15);
 }
 
 .contact-cta-dark .section-label {
@@ -1040,6 +1054,39 @@ ul { list-style: none; }
   color: rgba(255,255,255,.72);
   margin-top: 12px;
   margin-bottom: 32px;
+}
+
+/* Defined missing button variants */
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+  font-weight: 800;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  box-shadow: 0 8px 24px rgba(201,168,76,.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,.45);
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,.1);
+  border-color: var(--white);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,.45);
+}
+.btn-outline-light:hover {
+  background: rgba(255,255,255,.1);
+  border-color: var(--white);
 }
 
 .contact-cta-inner {
@@ -1258,9 +1305,35 @@ ul { list-style: none; }
 .page-hero-content { position: relative; z-index: 1; }
 
 .page-hero-icon {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: rgba(201,168,76,.2);
+  border-radius: 14px;
+  color: var(--gold-light);
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.page-hero-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--gold-light);
+  fill: var(--gold-light);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 10px;
 }
 
 .page-hero h1 {
