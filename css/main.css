@@ -23,7 +23,7 @@
   --transition: 0.25s ease;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --max-width: 1200px;
-  --section-gap: 96px;
+  --section-gap: 112px;
 }
 
 /* ── Reset & Base ─────────────────────────────────────────── */
@@ -350,19 +350,32 @@ ul { list-style: none; }
 
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   min-width: 240px;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition), transform var(--transition);
   z-index: 100;
+}
+
+/* Invisible bridge covers any gap so hover doesn't break */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
@@ -439,6 +452,20 @@ ul { list-style: none; }
 }
 .navbar-phone:hover { color: var(--gold); }
 
+/* Phone icon — navy pill style, distinct from WA */
+a.navbar-wa[href^="tel"] {
+  background: var(--off-white);
+  color: var(--navy);
+  border: 1.5px solid var(--border);
+}
+a.navbar-wa[href^="tel"]:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  box-shadow: 0 4px 12px rgba(26,39,68,.2);
+}
+
+/* WhatsApp icon — green */
 .navbar-wa {
   display: flex;
   align-items: center;
@@ -449,7 +476,7 @@ ul { list-style: none; }
   background: #25d366;
   color: var(--white);
   font-size: 1.1rem;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
 }
 .navbar-wa:hover {
   transform: scale(1.1);
@@ -1234,7 +1261,7 @@ ul { list-style: none; }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 74px 0 64px;
+  padding: 84px 0 72px;
   position: relative;
   overflow: hidden;
 }
@@ -1283,9 +1310,29 @@ ul { list-style: none; }
 .page-hero-content { position: relative; z-index: 1; }
 
 .page-hero-icon {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(201,168,76,.2);
+  border-radius: 12px;
+  color: var(--gold-light);
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+
+.page-hero-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--gold-light);
+  fill: var(--gold-light);
+}
+
+.page-hero-title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .page-hero h1 {
