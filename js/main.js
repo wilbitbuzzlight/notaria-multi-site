@@ -108,16 +108,28 @@ const Dropdown = (() => {
       const toggle = dd.querySelector('.nav-dropdown-toggle');
       if (!toggle) return;
 
+      // Open on hover (desktop)
+      dd.addEventListener('mouseenter', () => {
+        dd.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+      });
+      dd.addEventListener('mouseleave', () => {
+        dd.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+
+      // Also support click (touch / keyboard)
       toggle.addEventListener('click', e => {
         e.preventDefault();
         const isOpen = dd.classList.toggle('open');
-        dd.querySelector('.nav-dropdown-menu')?.setAttribute('aria-hidden', !isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
       });
 
       // Close when clicking outside
       document.addEventListener('click', e => {
         if (!dd.contains(e.target)) {
           dd.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
         }
       });
     });
