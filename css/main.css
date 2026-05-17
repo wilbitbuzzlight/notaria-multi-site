@@ -323,6 +323,16 @@ ul { list-style: none; }
   align-items: center;
   gap: 4px;
   cursor: pointer;
+  /* Match nav-link style exactly */
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+  background: none;
+  border: none;
+  font-family: var(--font);
 }
 
 .nav-dropdown-toggle .chevron {
@@ -428,6 +438,20 @@ ul { list-style: none; }
 }
 .navbar-phone:hover { color: var(--gold); }
 
+/* Phone icon button in navbar */
+a.navbar-wa[href^="tel"] {
+  background: var(--off-white);
+  color: var(--navy);
+  border: 1.5px solid var(--border);
+}
+a.navbar-wa[href^="tel"]:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  box-shadow: 0 4px 12px rgba(26,39,68,.2);
+}
+
+/* WhatsApp icon button in navbar */
 .navbar-wa {
   display: flex;
   align-items: center;
@@ -438,7 +462,7 @@ ul { list-style: none; }
   background: #25d366;
   color: var(--white);
   font-size: 1.1rem;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
 }
 .navbar-wa:hover {
   transform: scale(1.1);
@@ -713,15 +737,21 @@ ul { list-style: none; }
 }
 
 .service-card-icon {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--off-white);
   border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.service-card-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .service-card h3 {
@@ -1333,15 +1363,15 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .page-hero h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
   font-weight: 900;
   color: var(--white);
   letter-spacing: -.04em;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .page-hero p {
