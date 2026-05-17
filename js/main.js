@@ -225,11 +225,11 @@ const ContactForm = (() => {
       submitBtn.textContent = '⏳ Sending...';
 
       const formData = new FormData(form);
-      const action = form.action;
+      const action = form.getAttribute('action'); // raw attribute, not resolved URL
 
       try {
-        if (!action || action === window.location.href) {
-          // No Formspree action yet — show success anyway
+        if (!action || action === '' || action === '#') {
+          // No Formspree action configured yet — show friendly success message
           await new Promise(r => setTimeout(r, 800));
           showSuccess(form, submitBtn);
           return;
