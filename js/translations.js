@@ -432,6 +432,15 @@ const translations = {
     rls_bring_1: 'Device with camera and microphone',
     rls_bring_2: 'Loan documents in PDF (from your lender)',
     rls_bring_3: 'Valid government-issued photo ID',
+
+    /* Sidebar & shared keys */
+    sidebar_hours_title: 'Walk-In Hours',
+    sidebar_walkin: 'First come, first served — no appointment needed.',
+    svc_get_started: 'Get Started',
+    contact_us_btn: 'Contact Us',
+    aff_bring_1: 'Valid government-issued photo ID (driver\'s license, passport, etc.)',
+    aff_bring_2: 'Your completed affidavit document',
+    aff_bring_3: 'All parties who need to sign must be present',
   },
 
   /* ── SPANISH ────────────────────────────────────────────── */
@@ -801,6 +810,25 @@ const translations = {
     rls_bring_1: 'Dispositivo con cámara y micrófono',
     rls_bring_2: 'Documentos de préstamo en PDF (de su prestamista)',
     rls_bring_3: 'Identificación con foto emitida por el gobierno',
+
+    /* Bring/sidebar keys */
+    apo_bring_1: 'El documento original que desea apostillar',
+    apo_bring_2: 'Identificación con foto emitida por el gobierno',
+    tra_bring_1: 'Identificación con foto válida del padre o tutor',
+    tra_bring_2: 'Pasaporte o acta de nacimiento del menor',
+    tra_bring_3: 'Carta completada o podemos ayudarle a redactarla',
+    con_bring_1: 'Contrato completado (no firme antes de llegar)',
+    con_bring_2: 'Identificación con foto válida de todas las partes firmantes',
+    con_bring_3: 'Todas las partes deben estar presentes al mismo tiempo',
+    cor_bring_1: 'Documento corporativo completado (sin firmar)',
+    cor_bring_3: 'Cualquier documento de entidad de apoyo si se requiere',
+    trl_bring_1: 'El documento original a traducir',
+    pow_bring_2: 'Documento de poder notarial completado (sin firmar)',
+    pow_bring_3: 'El poderdante debe estar presente en persona',
+    trd_bring_1: 'Identificación con foto emitida por el gobierno',
+    trd_bring_2: 'Su documento — sin firmar',
+    trd_bring_3: 'Todas las partes firmantes deben estar presentes',
+    ele_h2_3: 'Lo que Necesitará',
   },
 
   /* ── CHINESE SIMPLIFIED ─────────────────────────────────── */
@@ -1170,6 +1198,25 @@ const translations = {
     rls_bring_1: '带摄像头和麦克风的设备',
     rls_bring_2: 'PDF贷款文件（来自贷款方）',
     rls_bring_3: '有效的政府颁发带照片身份证',
+
+    /* Bring/sidebar keys */
+    apo_bring_1: '您要申请附加证明书的原始文件',
+    apo_bring_2: '有效的政府颁发带照片身份证',
+    tra_bring_1: '父母或监护人的有效带照片身份证',
+    tra_bring_2: '未成年人的护照或出生证明',
+    tra_bring_3: '已完成的授权信函，或我们可帮助起草',
+    con_bring_1: '已完成的合同（到达前请勿签署）',
+    con_bring_2: '所有签署方的有效带照片身份证',
+    con_bring_3: '所有当事方必须同时在场',
+    cor_bring_1: '已完成的企业文件（未签署）',
+    cor_bring_3: '如需要，任何支持性实体文件',
+    trl_bring_1: '需要翻译的原始文件',
+    pow_bring_2: '已完成的授权委托书文件（未签署）',
+    pow_bring_3: '委托人必须亲自到场',
+    trd_bring_1: '有效的政府颁发带照片身份证',
+    trd_bring_2: '您的文件——未签署',
+    trd_bring_3: '所有签署方必须在场',
+    ele_h2_3: '您需要准备的',
   },
 
   /* ── BENGALI ────────────────────────────────────────────── */
@@ -1537,6 +1584,24 @@ const translations = {
     rls_bring_1: 'ক্যামেরা ও মাইক্রোফোন সহ ডিভাইস',
     rls_bring_2: 'পিডিএফ ঋণ নথি (ঋণদাতার কাছ থেকে)',
     rls_bring_3: 'বৈধ সরকারি ছবিযুক্ত পরিচয়পত্র',
+      /* Bring/sidebar keys */
+    apo_bring_1: 'যে মূল নথিতে অ্যাপোস্টিল করাতে চান',
+    apo_bring_2: 'বৈধ সরকারি ছবিযুক্ত পরিচয়পত্র',
+    tra_bring_1: 'পিতামাতা বা অভিভাবকের বৈধ ছবিযুক্ত পরিচয়পত্র',
+    tra_bring_2: 'নাবালকের পাসপোর্ট বা জন্মসনদ',
+    tra_bring_3: 'সম্পূর্ণ চিঠি, অথবা আমরা খসড়া করতে সাহায্য করতে পারি',
+    con_bring_1: 'সম্পূর্ণ চুক্তি (আসার আগে স্বাক্ষর করবেন না)',
+    con_bring_2: 'সকল স্বাক্ষরকারী পক্ষের বৈধ ছবিযুক্ত পরিচয়পত্র',
+    con_bring_3: 'সকল পক্ষকে একই সময়ে উপস্থিত থাকতে হবে',
+    cor_bring_1: 'সম্পূর্ণ কর্পোরেট নথি (স্বাক্ষরবিহীন)',
+    cor_bring_3: 'প্রয়োজনে যেকোনো সহায়ক প্রতিষ্ঠানের নথি',
+    trl_bring_1: 'অনুবাদ করার মূল নথি',
+    pow_bring_2: 'সম্পূর্ণ পাওয়ার অব অ্যাটর্নি নথি (স্বাক্ষরবিহীন)',
+    pow_bring_3: 'মূলতিনিকে অবশ্যই সশরীরে উপস্থিত থাকতে হবে',
+    trd_bring_1: 'বৈধ সরকারি ছবিযুক্ত পরিচয়পত্র',
+    trd_bring_2: 'আপনার নথি — স্বাক্ষরবিহীন',
+    trd_bring_3: 'সকল স্বাক্ষরকারী পক্ষকে উপস্থিত থাকতে হবে',
+    ele_h2_3: 'আপনার যা লাগবে',
     }
 };
 
