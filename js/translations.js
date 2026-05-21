@@ -206,6 +206,28 @@ const translations = {
     electronic_step5_title: "Sign & Receive",
     electronic_step5_desc:  "Sign digitally and receive your notarized document instantly.",
     electronic_cta_btn:     "Start Electronic Notarization Session",
+    /* Legacy keys (ES/ZH/BN pre-existing, EN parity fix) */
+    aff_h2_1:           'What is an Affidavit?',
+    aff_h2_2:           'What Types of Affidavits Do We Handle?',
+    aff_h2_3:           'How Does It Work?',
+    aff_p1:             'An affidavit is a sworn written statement of fact used in legal proceedings, signed in the presence of a notary who verifies the signer\'s identity.',
+    aff_p2:             'Walk into our office with your document and ID. The process usually takes just a few minutes. No appointment needed.',
+    aff_bring_title:    'What to Bring',
+    sidebar_address:    '69-05A Roosevelt Ave, Woodside, NY 11377',
+    sidebar_cta_title:  'Get Started',
+    svc_what_is:        'What is this service?',
+    svc_how_works:      'How It Works',
+    svc_ready_title:    'Ready to get started?',
+    svc_ready_sub:      'No appointment needed. Mon\u2013Sat, 10am\u20136pm.',
+    cta_walk_or_contact: 'Walk in or reach out \u2014 we\'re here for you.',
+
+    /* Service page CTA section (hardcoded — now wired) */
+    svc_cta_label:  'Ready to get started?',
+    svc_cta_title:  'Walk in or reach out \u2014 we\'re here for you.',
+    svc_cta_sub:    'No appointment needed. Mon\u2013Sat, 10am\u20136pm.',
+    ele_cta_label:  'Need notarization now?',
+    ele_cta_title:  'Walk in for traditional notarization \u2014 no wait list.',
+
     quick_reach_out: 'Reach Out Directly',
     form_send_message: 'Send us a message',
     aff_page_title: 'Affidavits',
@@ -830,6 +852,14 @@ const translations = {
     trd_bring_3: 'Todas las partes firmantes deben estar presentes',
     ele_h2_3: 'Lo que Necesitará',
 
+
+    /* Service page CTA section */
+    svc_cta_label:  '¿Listo para comenzar?',
+    svc_cta_title:  'Visítenos o comuníquese — estamos aquí para usted.',
+    svc_cta_sub:    'Sin cita previa. Lun–Sáb, 10am–6pm.',
+    ele_cta_label:  '¿Necesita notarización ahora?',
+    ele_cta_title:  'Visítenos para notarización tradicional — sin lista de espera.',
+
     /* Missing service page keys */
     quick_reach_out: 'Contáctenos Directamente',
     form_send_message: 'Envíenos un mensaje',
@@ -1274,6 +1304,14 @@ const translations = {
     trd_bring_3: '所有签署方必须在场',
     ele_h2_3: '您需要准备的',
 
+
+    /* Service page CTA section */
+    svc_cta_label:  '准备好开始了吗？',
+    svc_cta_title:  '直接来访或联系我们 — 我们随时为您服务。',
+    svc_cta_sub:    '无需预约。周一至周六，上午10点至下午6点。',
+    ele_cta_label:  '现在需要公证？',
+    ele_cta_title:  '前往我们办公室进行传统公证 — 无需等待。',
+
     /* Missing service page keys */
     quick_reach_out: '直接联系我们',
     form_send_message: '给我们发送消息',
@@ -1714,6 +1752,14 @@ const translations = {
     trd_bring_2: 'আপনার নথি — স্বাক্ষরবিহীন',
     trd_bring_3: 'সকল স্বাক্ষরকারী পক্ষকে উপস্থিত থাকতে হবে',
     ele_h2_3: 'আপনার যা লাগবে',
+
+
+    /* Service page CTA section */
+    svc_cta_label:  'শুরু করতে প্রস্তুত?',
+    svc_cta_title:  'সরাসরি আসুন বা যোগাযোগ করুন — আমরা আপনার জন্য আছি।',
+    svc_cta_sub:    'কোনো অ্যাপয়েন্টমেন্ট দরকার নেই। সোম–শনি, সকাল ১০টা–সন্ধ্যা ৬টা।',
+    ele_cta_label:  'এখনই নোটারি দরকার?',
+    ele_cta_title:  'ঐতিহ্যবাহী নোটারির জন্য সরাসরি আসুন — অপেক্ষার তালিকা নেই।',
 
     /* Missing service page keys */
     quick_reach_out: 'সরাসরি যোগাযোগ করুন',
